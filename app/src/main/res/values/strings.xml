@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CryptoCurrency</string>
+    <string name="home">Home</string>
+    <string name="learn_more">Learn more</string>
+    <string name="trending">Trending</string>
+    <string name="more">More</string>
 </resources>
