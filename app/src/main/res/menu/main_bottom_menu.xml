@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homePage"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home_page"/>
+
+    <item
+        android:id="@+id/trendingPage"
+        android:icon="@drawable/ic_trending"
+        android:title="@string/trends_page"/>
+
+    <item
+        android:id="@+id/newsPage"
+        android:icon="@drawable/ic_newspaper"
+        android:title="@string/news_page"/>
+
+    <item
+        android:id="@+id/userPage"
+        android:icon="@drawable/ic_avatar"
+        android:title="@string/user_page"/>
+</menu>

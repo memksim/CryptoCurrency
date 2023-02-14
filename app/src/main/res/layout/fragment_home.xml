@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -13,13 +13,13 @@
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/light_grey"
             android:fitsSystemWindows="true"
             app:contentScrim="@color/pink"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-            app:titleTextColor="@color/white"
             app:title="@string/home"
-            android:background="@color/light_grey">
-            
+            app:titleTextColor="@color/white">
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/size_250"
@@ -29,23 +29,23 @@
                     android:id="@+id/btnMore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_16"
                     android:src="@drawable/btn_more"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_margin="@dimen/spacing_16"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/newsTv"
                     style="@style/text_poppins_light_white_16"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_16"
                     android:ellipsize="end"
                     android:maxLines="4"
-                    android:layout_margin="@dimen/spacing_16"
+                    android:text="Crypto Prices Today: Bitcoin Increases By 0.24%, Ethereum Plunges Whereas Meme Coins Jump Up"
                     app:layout_constraintEnd_toStartOf="@id/btnMore"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:text="Crypto Prices Today: Bitcoin Increases By 0.24%, Ethereum Plunges Whereas Meme Coins Jump Up" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/imageView"
@@ -109,15 +109,15 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvTrending"
+                android:id="@+id/tvFavourites"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/trending"
-                android:textColor="@color/black"
-                android:textSize="24sp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="@dimen/spacing_16"
                 android:fontFamily="@font/poppins_medium"
+                android:text="@string/favourites"
+                android:textColor="@color/black"
+                android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/btnConvert" />
 
@@ -125,12 +125,13 @@
                 android:id="@+id/rvCurrency"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                tools:listitem="@layout/item_home_currency"
-                tools:itemCount="3"
                 android:layout_marginTop="@dimen/spacing_16"
-                app:layout_constraintTop_toBottomOf="@id/tvTrending"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@id/tvFavourites"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_home_currency"
+                />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
