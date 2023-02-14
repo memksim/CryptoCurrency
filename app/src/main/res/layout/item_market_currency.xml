@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/spacing_24"
+    android:paddingTop="@dimen/spacing_16"
+    android:paddingBottom="@dimen/spacing_16"
+    android:paddingRight="@dimen/spacing_24">
+
+    <include
+        android:id="@+id/icon"
+        layout="@layout/view_icon_item_home_currency"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvCryptoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_poppins_black_20"
+        tools:text="Bitcoin"
+        app:layout_constraintStart_toEndOf="@id/icon"
+        android:layout_marginStart="@dimen/spacing_16"
+        app:layout_constraintTop_toTopOf="@id/icon"/>
+
+    <ImageView
+        android:id="@+id/ivTrending"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:src="@drawable/filler_trending"
+        app:layout_constraintStart_toEndOf="@id/tvCryptoTitle"
+        app:layout_constraintEnd_toStartOf="@id/tvCurrency"
+        app:layout_constraintTop_toTopOf="@id/tvCryptoTitle"/>
+
+    <TextView
+        android:id="@+id/tvCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="$32,128.80"
+        style="@style/text_poppins_black_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivTrendingArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_keyboard_arrow_up_green"
+        app:layout_constraintStart_toStartOf="@id/tvCryptoTitle"
+        app:layout_constraintTop_toTopOf="@id/tvTrendingPercent"
+        app:layout_constraintBottom_toBottomOf="@id/tvTrendingPercent"/>
+
+    <TextView
+        android:id="@+id/tvTrendingPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="2.5%"
+        style="@style/text_poppins_light_grey_18"
+        app:layout_constraintStart_toEndOf="@id/ivTrendingArrow"
+        android:layout_marginStart="@dimen/spacing_8"
+        app:layout_constraintTop_toBottomOf="@id/tvCryptoTitle"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

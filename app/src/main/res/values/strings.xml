@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">CryptoCurrency</string>
+    <string name="home">Home</string>
+    <string name="learn_more">Learn more</string>
+    <string name="trending">Trending</string>
+    <string name="more">More</string>
+    <string name="favourites">Favourites</string>
+    <string name="home_page">Home page</string>
+    <string name="trends_page">Trends page</string>
+    <string name="news_page">News page</string>
+    <string name="user_page">User page</string>
+    <string name="market">Market</string>
+    <string name="search">Search</string>
 </resources>
